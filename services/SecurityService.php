@@ -9,7 +9,7 @@ use Yii;
 
 class SecurityService
 {
-    const DEFAULT_ROLE = 'Покупатель';
+//    const DEFAULT_ROLE = 'Покупатель';
 
     /**
      * Сохраняем форму с пользователем и персоной.
@@ -27,7 +27,7 @@ class SecurityService
         $person->patronymic = $formData['patronymic'];
 
         if ($person->save()) {
-            $userRole = Role::findOne(['name' => self::DEFAULT_ROLE]);
+            $userRole = Role::findOne(['name' => RoleService::DEFAULT_ROLE]);
 
             $user = new User();
 

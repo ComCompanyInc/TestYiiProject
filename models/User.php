@@ -19,7 +19,6 @@ use yii\web\IdentityInterface;
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
 
-
     /**
      * {@inheritdoc}
      */
@@ -119,5 +118,11 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public function validatePassword($password) {
         return Yii::$app->security->validatePassword($password, $this->password);
+    }
+
+    // models/User.php
+    public function getRoleName()
+    {
+        return $this->role->name;
     }
 }

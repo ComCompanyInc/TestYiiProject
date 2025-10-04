@@ -31,7 +31,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 <header id="header">
     <div class="container header-content">
-        <div class="logo">Магазин "ТехноМир"</div>
+        <div class="logo">Авиты Товары</div>
         <nav>
             <ul>
                 <li> <?= Html::a("Главная", '/application/main')?> </li>
